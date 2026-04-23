@@ -1,42 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
-  
   return (
-    <section className="py-8 sm:py-12 px-4 sm:px-6 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black relative overflow-hidden rounded-3xl">
-      {/* Enhanced Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/5 right-1/3 w-[400px] h-[400px] bg-[var(--gold-light)]/35 via-transparent to-[var(--gold)]/25 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/5 left-1/3 w-[500px] h-[500px] bg-[var(--gold-dark)]/35 via-transparent to-[var(--gold-light)]/25 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute top-2/3 right-1/4 w-[350px] h-[350px] bg-[var(--gold)]/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-[300px] h-[300px] bg-[var(--gold-dark)]/25 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+    <section className="relative bg-transparent overflow-hidden py-8 sm:py-12" id="cta">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center">
+          <div className="max-w-xl">
+            
+
+            {/* Headline */}
+            <h2 className="text-2xl md:text-4xl font-serif text-white leading-tight mb-6">
+              Start Building Your <br /> 
+              <span className="text-[#FFBF00] italic">Financial Future</span> Today.
+            </h2>
+
+            {/* Description */}
+            <p className="text-gray-400 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+              Take the first step towards credit mastery and business funding. 
+              The outcome is internal capability: systems that scale performance.
+            </p>
+
+            {/* Button */}
+            <a 
+              href="/contact"
+              className="inline-flex items-center gap-6 px-8 py-4 bg-[#d4ae16] text-white font-bold rounded-xl hover:bg-[#FFBF00] transition-all duration-300 group shadow-lg shadow-[#b38b59]/10"
+            >
+              <span>Book a Free Strategy Call</span>
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
+                <ArrowRight className="w-5 h-5 text-white" />
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-5xl mx-auto relative z-10 text-center">
-        <div className="animate-fadeInUp">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-black mb-4">
-            READY TO TRANSFORM?
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-black to-transparent mx-auto mb-8"></div>
-          <p className="text-xl sm:text-2xl text-black max-w-3xl mx-auto leading-relaxed font-medium mb-8">
-            Join the movement toward global generational wealth
-          </p>
+      {/* Image and Blend Layer */}
+      <div className="absolute top-0 right-0 h-full w-full lg:w-3/5 z-10 pointer-events-none">
+        <div className="relative h-full w-full">
+          {/* Main Image */}
+          <img 
+            src="/CTA.jpg" 
+            alt="Strategic Growth" 
+            className="h-full w-full object-cover object-center lg:object-right opacity-100"
+          />
           
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link 
-              to="/services" 
-              className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold text-lg uppercase tracking-wider transition-all duration-300 hover:from-yellow-600 hover:to-yellow-700 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Explore Services
-            </Link>
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-gray-800 to-black text-white font-bold text-lg uppercase tracking-wider transition-all duration-300 hover:from-black hover:to-gray-900 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Contact Us
-            </Link>
-          </div>
+          {/* Vertical Blend (Left to Right) - Softened to make image clearer */}
+          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
+          
+          {/* Subtle Horizontal Blends */}
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/20 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
       </div>
     </section>

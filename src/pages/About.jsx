@@ -3,76 +3,94 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
 import ScrollToTop from '../components/ScrollToTop';
+import { Target, Users, ShieldCheck, Award } from 'lucide-react';
 
 export default function About() {
   return (
-    <div className="app">
+    <div className="app bg-black min-h-screen">
       <Navbar />
       <main className="pt-20">
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="py-24 bg-gradient-to-b from-gray-950 to-black text-white px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">About Us</h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Learn more about Global Generational Wealth and our mission to transform lives through education and empowerment.
+              <h1 className="text-4xl md:text-6xl font-black mb-6 text-white">
+                Empowering Your <span className="text-yellow-500">Financial Independence</span>
+              </h1>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Global Generational Wealth is dedicated to providing individuals and business owners with the education, strategies, and tools needed to build a secure financial future.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h2 className="text-2xl font-bold mb-4 text-[var(--gold)]">Our Story</h2>
-                <p className="text-gray-300 mb-4">
-                  Global Generational Wealth was founded with a vision to provide real, actionable strategies for financial transformation. 
-                  We believe in boots-on-the-ground approaches that deliver tangible results.
-                </p>
-                <p className="text-gray-300 mb-4">
-                  Our team of experts brings decades of experience in finance, business, and personal development to help you 
-                  achieve your goals and create lasting wealth for future generations.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 text-white">Our Mission</h2>
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    Our mission is to simplify the complexities of the credit and funding landscape. We believe that everyone deserves access to the knowledge and resources required to improve their financial standing and access capital for growth.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800">
+                    <Target className="w-8 h-8 text-yellow-500 mb-4" />
+                    <h3 className="text-lg font-bold mb-2">Clear Strategy</h3>
+                    <p className="text-gray-500 text-sm">Actionable roadmaps designed for your specific goals.</p>
+                  </div>
+                  <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800">
+                    <ShieldCheck className="w-8 h-8 text-yellow-500 mb-4" />
+                    <h3 className="text-lg font-bold mb-2">Trusted Advice</h3>
+                    <p className="text-gray-500 text-sm">Professional guidance backed by real-world experience.</p>
+                  </div>
+                </div>
               </div>
               
-              <div className="bg-gray-800/50 p-8 rounded-xl border border-[var(--gold)]/20 backdrop-blur-sm">
-                <h2 className="text-2xl font-bold mb-4 text-[var(--gold)]">Our Approach</h2>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>Get approved for HIGH-Limit revolving credit cards in your Business Name with NO PERSONAL GUARANTEES</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>Access credit sources to get vendor credit, retail credit, service credits & Business credit cards LINKED TO YOUR EIN</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>Get a business credit profile QUICKY set up & activated with D&B # saving you time & money</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>Receive coaching & services with a business advisor who will help you EASILY navigate the corporate credit building process</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>BEREAU INSIGHTS See the same comprehensive report lenders & underwriters look at when making lending decisions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--gold)] mr-2">•</span>
-                    <span>Unincorporated compliance review to ensure your business exceeds credit issuer & lender FUNDABILITY STANDARDS to get automated approvals</span>
-                  </li>
-                </ul>
+              <div className="relative">
+                <div className="aspect-video rounded-3xl bg-gray-900 border border-gray-800 overflow-hidden relative group">
+                  <img 
+                    src="/Accredited leadership pathways that actually work.jpg" 
+                    alt="Our Team" 
+                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                  <div className="absolute bottom-8 left-8">
+                    <div className="flex items-center gap-3">
+                      <Award className="w-10 h-10 text-yellow-500" />
+                      <div>
+                        <p className="text-white font-bold text-xl">Proven Success</p>
+                        <p className="text-gray-400 text-sm">Empowering clients since 2015</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/30 rounded-3xl border border-gray-800 p-8 md:p-16 mb-24">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold mb-10 text-center">What Sets Us Apart</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                  {[
+                    "Proven credit improvement methodologies",
+                    "No personal guarantee business funding strategies",
+                    "Comprehensive EIN-linked credit building",
+                    "Expert navigational support throughout the process",
+                    "Deep insights into lender underwriting standards",
+                    "Advanced business compliance and fundability reviews"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                      </div>
+                      <p className="text-gray-300 font-medium">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             
-            {/* Thin horizontal divider between sections */}
-            <div className="py-8">
-              <div className="max-w-4xl flex flex-col items-center mx-auto px-4 sm:px-6">
-                <div className="h-px bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent"></div>
-              </div>
-            </div>
-            
-            {/* Using the same CTA component as the home page for consistency */}
             <CTA />
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
       <ScrollToTop />

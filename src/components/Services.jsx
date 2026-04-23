@@ -1,142 +1,98 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '../contexts/ThemeContext';
+
+const services = [
+  {
+    title: 'Personal Credit Repair',
+    category: 'Optimization',
+    description: 'Optimize your personal credit score for maximum borrowing power.',
+    id: 'personal-credit',
+    image: '/download (1).jpg',
+    span: 'col-span-1 md:col-span-2 aspect-[21/7]'
+  },
+  {
+    title: 'Business Credit Setup',
+    category: 'Infrastructure',
+    description: 'Build a strong business credit profile independent of personal liability.',
+    id: 'business-credit',
+    image: '/Accredited leadership pathways that actually work.jpg',
+    span: 'col-span-1 aspect-[16/11]'
+  },
+  {
+    title: 'Credit Education Program',
+    category: 'Knowledge',
+    description: 'Master the principles of wealth management and stability.',
+    id: 'education',
+    image: '/student-online-cute-guy-checked-shirt-with-glasses-studying-computer-looking-up.jpg',
+    span: 'col-span-1 aspect-[16/11]'
+  },
+  {
+    title: 'Funding Strategy',
+    category: 'Capital',
+    description: 'Personalized roadmaps to help you secure business capital.',
+    id: 'funding',
+    image: '/download (2).jpg',
+    span: 'col-span-1 md:col-span-2 aspect-[21/7]'
+  },
+];
 
 export default function Services() {
-  const { theme } = useTheme();
-  
-  const services = [
-    {
-      title: "1-on-1 Consulting Session",
-      price: "$99",
-      description: "Personalized strategy session to identify your unique path to Generational Wealth.",
-      features: [
-        "60 minute consultation",
-        "1 on 1 with a professional",
-        "Action plan",
-        "Personalized wealth assignment"
-      ],
-      cta: "Book Session",
-      id: "consulting",
-      backgroundImage: "/download (2).jpg"
-    },
-    {
-      title: "WORTHY OF CREDIT PROFILE / Business TRUST",
-      price: "$3,333",
-      description: "Professional credit profile to unlock credits through the system.",
-      features: [
-        "EIN & Set-up Assistance",
-        "Business Address",
-        "Business Phone Number",
-        "Professional Website & Email",
-        "Business Bank Account Assistance"
-      ],
-      cta: "Get Credit Profile",
-      id: "credit-profile",
-      backgroundImage: "/Accredited leadership pathways that actually work.jpg"
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 sm:py-32 px-4 sm:px-6 bg-black text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-500/15 to-transparent rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-500/15 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16 sm:mb-20 animate-fadeInUp">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6">
-            SERVICE PACKAGES
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-8"></div>
-          <p className="text-xl sm:text-2xl text-white max-w-3xl mx-auto leading-relaxed font-medium">
-            Investment opportunities to accelerate your journey to global generational wealth
+    <section className="py-16 bg-black" id="services">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-serif">Our Services</h2>
+          <p className="text-gray-400 text-sm md:text-base max-w-xl">
+            Selected financial strategies to grow your wealth. 
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {services.map((service, index) => (
             <div 
-              key={index} 
-              className="group border-2 border-gray-700 rounded-xl overflow-hidden hover:border-yellow-500 transition-all duration-500 animate-fadeInUp shadow-lg hover:shadow-xl h-full flex flex-col relative"
-              style={{animationDelay: `${0.1 * index}s`}}
+              key={index}
+              className={`${service.span} rounded-2xl relative overflow-hidden group border border-gray-800 shadow-xl`}
             >
-              {/* Background with image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-              {service.backgroundImage && (
-                <img 
-                  src={service.backgroundImage}
-                  alt={`${service.title} background`}
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
-                  onError={(e) => console.log(`Failed to load image: ${service.backgroundImage}`)}
-                />
-              )}
+              {/* Background Image */}
+              <img 
+                src={service.image} 
+                alt={service.title} 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-100"
+              />
               
-              <div className="p-6 sm:p-8 flex-grow relative z-10">
-                <div className="mb-6">
-                  {/* Decorative icon above title */}
-                  <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
-                      <span className="text-black font-bold text-xl">
-                        {index + 1}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2 text-center">{service.title}</h3>
-                  <div className="text-3xl font-black text-yellow-500 mb-4 text-center">{service.price}</div>
-                  <p className="text-gray-300 leading-relaxed">{service.description}</p>
+              {/* Overlay - Lighter to make image visible */}
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all duration-300"></div>
+              
+              {/* Extra gradient for text protection */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+              
+              {/* Content */}
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between z-10">
+                <div>
+                  <span className="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37] mb-3">
+                    {service.category}
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+                    {service.title}
+                  </h3>
                 </div>
 
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start space-x-3">
-                      <span className="text-yellow-500 mt-1">✓</span>
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="p-6 sm:p-8 pt-0">
-                <div className="space-y-4">
+                <div className="flex items-center gap-6">
                   <Link 
-                    to={`/service/${service.id}`} 
-                    className="block w-full text-center py-3 bg-yellow-500 text-black font-bold uppercase tracking-wider transition-all duration-300 hover:bg-yellow-600 rounded-lg shadow-md hover:shadow-lg relative z-20"
+                    to={`/service/${service.id}`}
+                    className="inline-flex items-center px-6 py-2 bg-white text-black text-[10px] font-black uppercase tracking-widest rounded-md hover:bg-[#D4AF37] transition-colors"
                   >
-                    Learn More
+                    Details
                   </Link>
-                  <Link 
-                    to="/contact" 
-                    className="block w-full text-center py-3 border-2 border-gray-600 text-gray-300 font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gray-800 rounded-lg"
-                  >
-                    {service.cta}
-                  </Link>
+                  <p className="text-gray-300 text-xs md:text-sm hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-w-sm">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Guarantee Section - Commented out as requested */}
-        {/* 
-        <div className="mt-16 p-8 bg-gradient-to-r from-white via-gray-50 to-gray-100 border-2 border-gray-300 rounded-2xl text-center animate-fadeInUp shadow-lg" style={{animationDelay: '0.5s'}}>
-          <div className="inline-flex items-center justify-center space-x-3 mb-4">
-            <span className="text-2xl">💯</span>
-            <h3 className="text-2xl font-bold text-gray-800">Our Ironclad Guarantee</h3>
-            <span className="text-2xl">💯</span>
-          </div>
-          <p className="text-xl text-yellow-600 font-bold mb-2">
-            If you don't see tangible results within 30 days, we'll refund your investment. No questions asked.
-          </p>
-          <p className="text-gray-600">
-            * Terms and conditions apply. Results may vary based on individual commitment and effort.
-          </p>
-        </div>
-        */}
       </div>
     </section>
   );

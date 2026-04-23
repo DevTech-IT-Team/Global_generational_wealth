@@ -24,16 +24,18 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-5 animate-fadeInUp">
             <div className="mb-6">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-3">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-3 text-white">
                 <div className="relative group">
                   <img src="/Modern Geometric Head Logo.png" alt="Logo" className="h-10 w-10 sm:h-14 sm:w-14 object-contain" />
-                  <div className="absolute inset-0 bg-[var(--gold)]/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-yellow-500/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <h3 className="text-sm sm:text-base font-black gradient-text leading-tight">GLOBAL<br/>GENERATIONAL<br/>WEALTH</h3>
+                <h3 className="text-sm sm:text-base font-black leading-tight">GLOBAL<br/>GENERATIONAL<br/>WEALTH</h3>
               </div>
-              <p className="text-[var(--gold)] font-bold tracking-[0.2em] text-xs">REAL. RELIABLE. READY.</p>
+              <p className="text-yellow-500 font-bold tracking-[0.1em] text-xs uppercase">Build Credit. Access Funding. Grow Wealth.</p>
             </div>
-            <p className="text-xs text-[var(--gold)]/50 italic leading-relaxed">For Educational Purposes Only</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Empowering individuals and business owners with the strategies needed to achieve long-term financial stability and success.
+            </p>
           </div>
 
           {/* Contact Section */}
@@ -116,10 +118,10 @@ export default function Footer() {
         {/* Copyright & Additional Info */}
         <div className="text-center space-y-4">
           <p className="text-sm text-gray-400 animate-fadeIn">
-            © {new Date().getFullYear()} <span className="text-[var(--gold)] font-bold">Global Generational Wealth</span>. All Rights Reserved.
+            © {new Date().getFullYear()} <span className="text-yellow-500 font-bold">Global Generational Wealth</span>. All Rights Reserved.
           </p>
           <p className="text-xs text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Dedicated to empowering individuals and families worldwide to achieve lasting transformation and build generational wealth through education, alignment, and mastery.
+            Leading the way in credit education, business funding, and strategic wealth development for a new generation of entrepreneurs.
           </p>
         </div>
       </div>
