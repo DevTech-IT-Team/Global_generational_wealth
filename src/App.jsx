@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import ServicesPage from './pages/ServicesPage'
 import About from './pages/About'
 import ServiceDetail from './pages/ServiceDetail'
 import Contact from './pages/Contact'
+import PricingPage from './pages/PricingPage'
 import { ThemeProvider } from './contexts/ThemeContext'
 
 function ScrollToTop() {
@@ -25,9 +25,9 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<ServicesPage />} />
         <Route path="/service/:serviceId" element={<ServiceDetail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </>
   );

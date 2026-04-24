@@ -11,10 +11,10 @@ export default function Hero() {
           alt="Financial Success" 
           className="w-full h-full object-cover"
         />
-        {/* Subtle Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        {/* Gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+        {/* Lighter Dark Overlay */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Soft Graduate for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
       </div>
 
       {/* Content */}
@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight animate-fadeInUp">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight animate-fadeInUp drop-shadow-2xl">
             Build Credit. <span className="text-yellow-500">Access Funding.</span><br />
             Grow Your Financial Future.
           </h1>

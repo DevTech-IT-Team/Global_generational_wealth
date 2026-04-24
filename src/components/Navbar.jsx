@@ -15,7 +15,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'bg-black/40 backdrop-blur-md border-b border-white/5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -44,8 +44,8 @@ export default function Navbar() {
             <Link to="/about" className="text-sm font-bold text-gray-300 hover:text-yellow-500 transition-colors uppercase tracking-widest">
               About
             </Link>
-            <Link to="/services" className="text-sm font-bold text-gray-300 hover:text-yellow-500 transition-colors uppercase tracking-widest">
-              Services
+            <Link to="/pricing" className="text-sm font-bold text-gray-300 hover:text-yellow-500 transition-colors uppercase tracking-widest">
+              Pricing
             </Link>
             
             <Link
@@ -88,11 +88,11 @@ export default function Navbar() {
               About
             </Link>
             <Link 
-              to="/services" 
+              to="/pricing" 
               className="block text-xl font-bold text-white hover:text-yellow-500 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              Pricing
             </Link>
             <Link
               to="/contact"

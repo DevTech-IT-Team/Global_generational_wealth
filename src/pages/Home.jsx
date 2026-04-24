@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks';
 import Services from '../components/Services';
 import UBOT from '../components/UBOT';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Pricing from '../components/Pricing';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import ScrollToTop from '../components/ScrollToTop';
@@ -22,6 +23,7 @@ export default function Home() {
         <Services />
         <UBOT />
         <WhyChooseUs />
+        <Pricing />
         <Testimonials />
         <CTA />
       </main>
