@@ -11,10 +11,10 @@ export default function Hero() {
           alt="Financial Success" 
           className="w-full h-full object-cover"
         />
-        {/* Lighter Dark Overlay */}
-        <div className="absolute inset-0 bg-black/20"></div>
-        {/* Soft Graduate for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+        {/* Stronger Dark Overlay for better visibility */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Soft Gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40"></div>
       </div>
 
       {/* Content */}

@@ -33,7 +33,7 @@ const businessFeatures = [
 
 export default function PricingPage() {
   return (
-    <div className="bg-black min-h-screen text-[#1a1a1a] font-serif selection:bg-[#c5a059] selection:text-white">
+    <div className="bg-black min-h-screen text-white font-serif selection:bg-[#c5a059] selection:text-white">
       <Navbar />
 
       {/* Main Container with Background Image */}
@@ -41,14 +41,17 @@ export default function PricingPage() {
         className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative min-h-screen bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: "url('/pricing_bg.jpg')" }}
       >
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
+
         <div className="max-w-7xl mx-auto relative z-10">
           
           {/* Header Section - Positioned at the top with better visibility */}
-          <div className="text-center mb-12 border-b-2 border-[#c5a059]/20 pb-8 bg-white/15 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/10">
-            <h1 className="text-4xl md:text-7xl font-black text-black leading-tight tracking-tighter uppercase mb-2 drop-shadow-sm">
+          <div className="text-center mb-12 border-b-2 border-[#c5a059]/20 pb-8 bg-white/5 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/10">
+            <h1 className="text-4xl md:text-7xl font-black text-white leading-tight tracking-tighter uppercase mb-2 drop-shadow-2xl">
               The $3333 Mastery Package
             </h1>
-            <h2 className="text-xl md:text-2xl font-bold text-[#c5a059] tracking-[0.2em] uppercase drop-shadow-[0_2px_2px_rgba(0,0,0,0.1)]">
+            <h2 className="text-xl md:text-2xl font-bold text-[#c5a059] tracking-[0.2em] uppercase drop-shadow-lg">
               Build Your Private Financial Fortress
             </h2>
           </div>
@@ -69,7 +72,7 @@ export default function PricingPage() {
                       <item.icon className="w-5 h-5 text-[#c5a059] group-hover:scale-125 transition-transform" />
                       {item.title}
                     </h4>
-                    <p className="text-[#333] text-xs leading-relaxed italic font-bold">
+                    <p className="text-white/80 text-xs leading-relaxed italic font-bold">
                       {item.desc}
                     </p>
                   </div>
@@ -93,7 +96,7 @@ export default function PricingPage() {
                       <item.icon className="w-5 h-5 text-[#c5a059] group-hover:scale-125 transition-transform" />
                       {item.title}
                     </h4>
-                    <p className="text-[#333] text-xs leading-relaxed italic font-bold text-right">
+                    <p className="text-white/80 text-xs leading-relaxed italic font-bold text-right">
                       {item.desc}
                     </p>
                   </div>
@@ -134,7 +137,7 @@ export default function PricingPage() {
              </Link>
              <Link 
               to="/contact" 
-              className="w-full sm:w-auto px-16 py-6 border-2 border-black/20 text-black font-black text-2xl rounded-2xl hover:bg-black/5 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
+              className="w-full sm:w-auto px-16 py-6 border-2 border-white/20 text-white font-black text-2xl rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 backdrop-blur-sm"
              >
                STRATEGY CALL
              </Link>
