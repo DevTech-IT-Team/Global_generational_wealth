@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function Footer() {
   const [showModal, setShowModal] = useState(null);
 
@@ -16,7 +15,7 @@ export default function Footer() {
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-[var(--gold)]/5 to-transparent rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-[var(--gold)]/5 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-[var(--gold)]/5 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -29,7 +28,7 @@ export default function Footer() {
                   <img src="/Modern Geometric Head Logo.png" alt="Logo" className="h-10 w-10 sm:h-14 sm:w-14 object-contain" />
                   <div className="absolute inset-0 bg-yellow-500/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <h3 className="text-sm sm:text-base font-black leading-tight">GLOBAL<br/>GENERATIONAL<br/>WEALTH</h3>
+                <h3 className="text-sm sm:text-base font-black leading-tight">GLOBAL<br />GENERATIONAL<br />WEALTH</h3>
               </div>
               <p className="text-yellow-500 font-bold tracking-[0.1em] text-xs uppercase">Build Credit. Access Funding. Grow Wealth.</p>
             </div>
@@ -39,14 +38,11 @@ export default function Footer() {
           </div>
 
           {/* Contact Section */}
-          <div className="animate-fadeInUp" style={{animationDelay: '0.1s'}}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
             <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Contact Us</h4>
             <div className="space-y-3 text-sm">
               <div className="group">
-                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/tommy-hong-9963063a5/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[var(--gold)] transition-colors duration-300 block leading-relaxed">
-                  Tommy Hong
-                </a>
+
               </div>
               <div className="pt-2">
                 <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Address</p>
@@ -54,14 +50,14 @@ export default function Footer() {
                 <p className="text-gray-300">Seattle, WA 98104</p>
                 <p className="text-gray-300">United States</p>
               </div>
-              
+
               <div className="pt-2">
                 <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Phone</p>
                 <a href="tel:+18886876829" className="text-gray-300 hover:text-[var(--gold)] transition-colors duration-300 block leading-relaxed">
                   (888) 687-6829
                 </a>
               </div>
-              
+
               <div className="pt-2">
                 <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Business Hours</p>
                 <p className="text-gray-300 leading-relaxed">
@@ -73,7 +69,7 @@ export default function Footer() {
           </div>
 
           {/* Social Section */}
-          <div className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Follow Us</h4>
             <div className="space-y-4">
               <a href="http://www.youtube.com/@GLOBALGENERATIONALWEALTH" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300">
@@ -84,11 +80,24 @@ export default function Footer() {
                 <span className="text-lg">♪</span>
                 <span className="text-sm font-medium">TikTok</span>
               </a>
+              <a
+                href="https://www.linkedin.com/in/tommy-hong-9963063a5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-3 text-gray-300 color invert hover:text-[var(--gold)] transition-all duration-300"
+              >
+                <img
+                  src="/linkedin_icon.png"
+                  alt="LinkedIn"
+                  className="w-5 h-5 object-contain shrink-0"
+                />
+                <span className="text-sm font-medium color invert">LinkedIn</span>
+              </a>
             </div>
           </div>
 
           {/* Legal Section */}
-          <div className="animate-fadeInUp" style={{animationDelay: '0.3s'}}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
             <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Legal</h4>
             <div className="space-y-4">
               <button onClick={() => openModal('terms')} className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300 cursor-pointer w-full text-left">
@@ -137,27 +146,27 @@ export default function Footer() {
               </div>
               <div className="space-y-4 text-gray-300">
                 <p className="font-bold">Last Updated: December 15, 2025</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Acceptance of Terms</h3>
                 <p>By accessing or using the services provided by Global Generational Wealth, you agree to be bound by these Terms & Conditions and all applicable laws and regulations.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. Services</h3>
                 <p>Global Generational Wealth provides educational and consulting services related to personal development, financial literacy, and business strategy. All services are provided for educational purposes only.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Intellectual Property</h3>
                 <p>All content, materials, and intellectual property provided by Global Generational Wealth are protected by copyright and other intellectual property laws. Unauthorized use is strictly prohibited.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. User Responsibilities</h3>
                 <p>You agree to use our services responsibly and not engage in any unlawful activities. You are responsible for maintaining the confidentiality of your account information.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Limitation of Liability</h3>
                 <p>Global Generational Wealth shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Changes to Terms</h3>
                 <p>We reserve the right to modify these terms at any time. Continued use of our services after such modifications constitutes acceptance of the revised terms.</p>
               </div>
               <div className="mt-8 text-center">
-                <button 
+                <button
                   onClick={closeModal}
                   className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
                 >
@@ -180,30 +189,30 @@ export default function Footer() {
               </div>
               <div className="space-y-4 text-gray-300">
                 <p className="font-bold">Last Updated: December 15, 2025</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Information We Collect</h3>
                 <p>We collect information you provide directly to us, such as when you contact us, register for services, or participate in surveys. This may include your name, email address, phone number, and payment information.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. How We Use Your Information</h3>
                 <p>We use your information to provide and improve our services, communicate with you, process transactions, and comply with legal obligations.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Information Sharing</h3>
                 <p>We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our business.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. Data Security</h3>
                 <p>We implement industry-standard security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Cookies and Tracking</h3>
                 <p>We may use cookies and similar tracking technologies to enhance your experience on our website and analyze usage patterns.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Your Rights</h3>
                 <p>You have the right to access, update, or delete your personal information. Contact us to exercise these rights.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">7. Changes to Privacy Policy</h3>
                 <p>We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on our website.</p>
               </div>
               <div className="mt-8 text-center">
-                <button 
+                <button
                   onClick={closeModal}
                   className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
                 >
@@ -226,30 +235,30 @@ export default function Footer() {
               </div>
               <div className="space-y-4 text-gray-300">
                 <p className="font-bold">Last Updated: December 15, 2025</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Educational Purposes Only</h3>
                 <p>All content provided by Global Generational Wealth is for educational and informational purposes only. We are not financial advisors, lawyers, or accountants. Nothing on this website constitutes professional advice.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. No Guarantees</h3>
                 <p>We make no guarantees about the results you may achieve from implementing our strategies or purchasing our services. Past performance is not indicative of future results.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Third-Party Content</h3>
                 <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or opinions expressed on these sites.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. Investment Risks</h3>
                 <p>Investing involves risk, including the potential loss of principal. Any investment decisions you make are solely your responsibility.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Testimonials</h3>
                 <p>Testimonials and case studies represent exceptional results and are not typical. Individual results will vary.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Limitation of Liability</h3>
                 <p>To the fullest extent permitted by law, Global Generational Wealth shall not be liable for any direct, indirect, incidental, special, or consequential damages.</p>
-                
+
                 <h3 className="text-xl font-bold text-[var(--gold)] mt-6">7. Governing Law</h3>
                 <p>These disclaimers shall be governed by and construed in accordance with the laws of the State of Washington.</p>
               </div>
               <div className="mt-8 text-center">
-                <button 
+                <button
                   onClick={closeModal}
                   className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
                 >

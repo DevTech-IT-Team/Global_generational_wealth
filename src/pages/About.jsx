@@ -20,7 +20,7 @@ export default function About() {
                 Global Generational Wealth is dedicated to providing individuals and business owners with the education, strategies, and tools needed to build a secure financial future.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
               <div className="space-y-8">
                 <div>
@@ -29,7 +29,7 @@ export default function About() {
                     Our mission is to simplify the complexities of the credit and funding landscape. We believe that everyone deserves access to the knowledge and resources required to improve their financial standing and access capital for growth.
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800">
                     <Target className="w-8 h-8 text-yellow-500 mb-4" />
@@ -43,12 +43,12 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="aspect-video rounded-3xl bg-gray-900 border border-gray-800 overflow-hidden relative group">
-                  <img 
-                    src="/Accredited leadership pathways that actually work.jpg" 
-                    alt="Our Team" 
+                  <img
+                    src="/Accredited leadership pathways that actually work.jpg"
+                    alt="Our Team"
                     className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -71,7 +71,6 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                   {[
                     "Proven credit improvement methodologies",
-                    "No personal guarantee business funding strategies",
                     "Comprehensive EIN-linked credit building",
                     "Expert navigational support throughout the process",
                     "Deep insights into lender underwriting standards",
@@ -87,7 +86,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            
+
             <CTA />
           </div>
         </section>
