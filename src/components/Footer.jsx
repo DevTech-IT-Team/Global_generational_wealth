@@ -91,7 +91,7 @@ export default function Footer() {
                   alt="LinkedIn"
                   className="w-5 h-5 object-contain shrink-0"
                 />
-                <span className="text-sm font-medium color invert">LinkedIn</span>
+                <span className="text-sm font-medium color-invert">LinkedIn</span>
               </a>
             </div>
           </div>
