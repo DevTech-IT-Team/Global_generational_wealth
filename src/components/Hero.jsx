@@ -72,9 +72,8 @@ export default function Hero() {
                 exit={{ x: 1200, opacity: 0, scale: 0.9, rotateZ: 10 }}
                 // Cinematic momentum transition profile
                 transition={{
-                  duration: 4.4,
-                  // [initial delay/anticipation, slow acceleration, heavy braking, smooth slide-in]
-                  ease: [0.3, 0.05, 0.05, 1.0],
+                  duration: 5, // Dropped from 4.4s for a much faster pace
+                  ease: [.9, 1.9, 2.1, 1.5],
                 }}
                 className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${currentCard.color} p-5 sm:p-6 border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between select-none text-left overflow-hidden`}>
                 {/* High-Gloss Light Flare Sheen Coating */}
