@@ -72,11 +72,11 @@ export default function Hero() {
                 exit={{ x: 1200, opacity: 0, scale: 0.9, rotateZ: 10 }}
                 // Cinematic momentum transition profile
                 transition={{
-                  duration: 0.95,
-                  ease: [0.22, 1, 0.36, 1],
+                  duration: 4.4,
+                  // [initial delay/anticipation, slow acceleration, heavy braking, smooth slide-in]
+                  ease: [0.3, 0.05, 0.05, 1.0],
                 }}
-                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${currentCard.color} p-5 sm:p-6 border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between select-none text-left overflow-hidden`}
-              >
+                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${currentCard.color} p-5 sm:p-6 border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between select-none text-left overflow-hidden`}>
                 {/* High-Gloss Light Flare Sheen Coating */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 pointer-events-none" />
 
