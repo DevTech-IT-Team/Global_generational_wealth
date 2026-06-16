@@ -28,7 +28,7 @@ const CARDS_DATA = [
   {
     id: 3,
     bank: "CAPITAL ONE",
-    tier: "Spark Sovereign",
+    tier: "Spark Card",
     limit: "$85,000",
     apr: "0% APR for 18 Mos",
     // Burnished dark jade/obsidian composite plating
