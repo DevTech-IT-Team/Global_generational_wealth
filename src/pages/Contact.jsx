@@ -291,8 +291,8 @@ export default function Contact() {
 
                 {/* Official Business Social Media Links */}
                 <div className="pt-4 border-t border-zinc-850">
-                  <span className="block text-[10px] uppercase font-black text-zinc-500 tracking-wider mb-3">
-                    Follow Us
+                  <span className="block text-[10px] uppercase font-bold text-zinc-500 tracking-wider mb-3">
+                    Official Company Pages
                   </span>
                   <div className="flex items-center gap-3">
                     <a
