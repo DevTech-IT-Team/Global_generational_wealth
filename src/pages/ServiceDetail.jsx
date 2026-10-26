@@ -137,17 +137,19 @@ export default function ServiceDetail() {
                 </div>
                 
                 <div className="space-y-4 mb-8">
-                  <Link 
-                    to="/contact" 
-                    className="block w-full py-5 bg-yellow-500 text-black font-black text-center rounded-xl hover:bg-yellow-400 Transition-all duration-300"
+                  <a 
+                    href="https://calendar.app.google/94T74SFZmhARq4xt9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-4 bg-yellow-500 text-black font-black text-center text-xs uppercase tracking-wider rounded-xl hover:bg-yellow-400 transition-all duration-300 shadow-lg"
                   >
-                    Start Your Application
-                  </Link>
+                    Schedule 30-Min Meeting
+                  </a>
                   <Link 
-                    to="/contact" 
-                    className="block w-full py-5 bg-transparent border border-gray-700 text-white font-bold text-center rounded-xl hover:bg-gray-800 transition-all duration-300"
+                    to="/pricing" 
+                    className="block w-full py-4 bg-transparent border border-gray-700 text-white font-bold text-center text-xs uppercase tracking-wider rounded-xl hover:bg-gray-800 transition-all duration-300"
                   >
-                    Schedule Free Consultation
+                    View Packages ($999 & $2,222)
                   </Link>
                 </div>
                 

@@ -34,14 +34,22 @@ export default function UBOT() {
               ))}
             </div>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <a 
-                href="/contact" 
+                href="https://calendar.app.google/94T74SFZmhARq4xt9"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-500/20"
               >
-                Schedule a Consultation
+                Schedule Trust Consultation (30 Min)
                 <FileText className="w-5 h-5" />
               </a>
+              {/* <a
+                href="/resources"
+                className="inline-flex items-center gap-2 px-6 py-4 bg-zinc-900 border border-zinc-800 text-zinc-300 font-bold rounded-lg hover:bg-zinc-800 transition-colors text-sm"
+              >
+                Download UBOT Guide (PDF)
+              </a> */}
             </div>
           </div>
           

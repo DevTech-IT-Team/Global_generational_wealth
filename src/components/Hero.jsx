@@ -175,19 +175,27 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 w-full sm:w-auto">
             <a
-              href="/calculator"
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-black font-extrabold rounded-xl hover:from-yellow-400 hover:to-amber-500 transition-all duration-300 shadow-xl shadow-yellow-500/10 flex items-center justify-center gap-2 tracking-wide text-sm"
+              href="https://calendar.app.google/94T74SFZmhARq4xt9"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="hero-schedule-meeting-btn"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 text-black font-extrabold rounded-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 tracking-wide text-sm"
             >
-              See your funding range
-              <TrendingUp className="w-4 h-4 stroke-[3]" />
+              <Landmark className="w-4 h-4 text-black" />
+              Schedule a Meeting (30 Min)
             </a>
             <a
-              href="/contact"
+              href="/pricing"
               className="w-full sm:w-auto px-8 py-4 bg-zinc-900 border border-zinc-800 text-zinc-200 font-bold rounded-xl hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm"
             >
-              Talk to an advisor
-              <Landmark className="w-4 h-4" />
+              Explore Packages ($999 & $2,222)
             </a>
+            {/* <a
+              href="/resources"
+              className="w-full sm:w-auto px-6 py-4 text-zinc-400 hover:text-[#D4AF37] font-semibold transition-colors flex items-center justify-center gap-1.5 text-xs uppercase tracking-wider"
+            >
+              Download PDF Ebooks
+            </a> */}
           </div>
         </div>
 

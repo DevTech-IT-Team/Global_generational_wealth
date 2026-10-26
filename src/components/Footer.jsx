@@ -1,274 +1,182 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+
+export const SOCIAL_LINKS = {
+  linkedIn: 'https://www.linkedin.com/company/global-generational-wealth/',
+  facebook: 'https://www.facebook.com/profile.php?id=61590009347404',
+  instagram: 'https://www.instagram.com/globalgenerationalwealth/'
+};
+
+export const MEETING_CALENDAR_URL = "https://calendar.app.google/94T74SFZmhARq4xt9";
+
 export default function Footer() {
-  const [showModal, setShowModal] = useState(null);
-
-  const openModal = (modalType) => {
-    setShowModal(modalType);
-  };
-
-  const closeModal = () => {
-    setShowModal(null);
-  };
-
   return (
-    <footer className="py-16 sm:py-24 bg-gradient-to-b from-[var(--gray-900)] to-black border-t border-[var(--gold)]/30 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-[var(--gold)]/5 to-transparent rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-[var(--gold)]/5 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-12 sm:mb-16">
-          {/* Brand Section */}
-          <div className="space-y-5 animate-fadeInUp">
-            <div className="mb-6">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-3 text-white">
-                <div className="relative group">
-                  <img src="/Modern Geometric Head Logo.png" alt="Logo" className="h-10 w-10 sm:h-14 sm:w-14 object-contain" />
-                  <div className="absolute inset-0 bg-yellow-500/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <h3 className="text-sm sm:text-base font-black leading-tight">GLOBAL<br />GENERATIONAL<br />WEALTH</h3>
-              </div>
-              <p className="text-yellow-500 font-bold tracking-[0.1em] text-xs uppercase">Build Credit. Access Funding. Grow Wealth.</p>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Empowering individuals and business owners with the strategies needed to achieve long-term financial stability and success.
-            </p>
-          </div>
-
-          {/* Contact Section */}
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-            <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Contact Us</h4>
-            <div className="space-y-3 text-sm">
-              <div className="group">
-
-              </div>
-              <div className="pt-2">
-                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Address</p>
-                <p className="text-gray-300 leading-relaxed">600 1st Ave, Ste 102 - 2534</p>
-                <p className="text-gray-300">Seattle, WA 98104</p>
-                <p className="text-gray-300">United States</p>
-              </div>
-
-              <div className="pt-2">
-                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Phone</p>
-                <a href="tel:+18886876829" className="text-gray-300 hover:text-[var(--gold)] transition-colors duration-300 block leading-relaxed">
-                  (888) 687-6829
-                </a>
-              </div>
-
-              <div className="pt-2">
-                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wide">Business Hours</p>
-                <p className="text-gray-300 leading-relaxed">
-                  11am - 7pm (Mountain Time)<br />
-                  Monday - Saturday
+    <footer className="bg-black border-t border-zinc-800/80 text-white relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        
+        {/* Main Clean Footer Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
+          
+          {/* Brand & Socials */}
+          <div className="col-span-2 md:col-span-2 space-y-4">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <img 
+                src="/Modern Geometric Head Logo.png" 
+                alt="Global Generational Wealth" 
+                className="h-10 w-10 object-contain group-hover:scale-105 transition-transform"
+              />
+              <div>
+                <h4 className="text-base font-black tracking-tight text-white leading-tight">
+                  GLOBAL <span className="text-[#D4AF37]">GENERATIONAL</span> WEALTH
+                </h4>
+                <p className="text-[10px] text-zinc-500 tracking-[0.2em] font-semibold uppercase">
+                  Corporate Advisory Firm
                 </p>
               </div>
-            </div>
-          </div>
+            </Link>
 
-          {/* Social Section */}
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Follow Us</h4>
-            <div className="space-y-4">
-              <a href="http://www.youtube.com/@GLOBALGENERATIONALWEALTH" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300">
-                <span className="text-lg">▶</span>
-                <span className="text-sm font-medium">YouTube</span>
-              </a>
-              <a href="https://www.tiktok.com/@globalgenerationalwealth" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300">
-                <span className="text-lg">♪</span>
-                <span className="text-sm font-medium">TikTok</span>
-              </a>
+            <p className="text-zinc-500 text-xs leading-relaxed max-w-sm">
+              Empowering business entities with commercial credit infrastructure, asset protection structures, and strategic funding.
+            </p>
+
+            {/* Clean Social Icons */}
+            <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.linkedin.com/in/tommy-hong-9963063a5/"
+                href={SOCIAL_LINKS.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center space-x-3 text-gray-300 color invert hover:text-[var(--gold)] transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-[#D4AF37] hover:text-black border border-zinc-800 flex items-center justify-center text-zinc-400 transition-all duration-200"
+                aria-label="LinkedIn"
               >
-                <img
-                  src="/linkedin_icon.png"
-                  alt="LinkedIn"
-                  className="w-5 h-5 object-contain shrink-0"
-                />
-                <span className="text-sm font-medium color-invert">LinkedIn</span>
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z" />
+                </svg>
+              </a>
+
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-[#D4AF37] hover:text-black border border-zinc-800 flex items-center justify-center text-zinc-400 transition-all duration-200"
+                aria-label="Facebook"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+
+              <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-zinc-900 hover:bg-[#D4AF37] hover:text-black border border-zinc-800 flex items-center justify-center text-zinc-400 transition-all duration-200"
+                aria-label="Instagram"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
               </a>
             </div>
           </div>
 
-          {/* Legal Section */}
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-            <h4 className="text-white font-black mb-5 text-base tracking-wider uppercase border-b border-[var(--gold)]/20 pb-2">Legal</h4>
-            <div className="space-y-4">
-              <button onClick={() => openModal('terms')} className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300 cursor-pointer w-full text-left">
-                <span className="text-base">📄</span>
-                <span className="text-sm font-medium">Terms & Conditions</span>
-              </button>
-              <button onClick={() => openModal('privacy')} className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300 cursor-pointer w-full text-left">
-                <span className="text-base">🔒</span>
-                <span className="text-sm font-medium">Privacy Policy</span>
-              </button>
-              <button onClick={() => openModal('disclaimer')} className="group flex items-center space-x-3 text-gray-300 hover:text-[var(--gold)] transition-all duration-300 cursor-pointer w-full text-left">
-                <span className="text-base">⚠️</span>
-                <span className="text-sm font-medium">Disclaimer</span>
-              </button>
-            </div>
+          {/* Clean Links Column: Company */}
+          <div>
+            <h5 className="text-xs font-black uppercase tracking-[0.15em] text-white mb-4">
+              Company
+            </h5>
+            <ul className="space-y-2.5 text-xs text-zinc-400">
+              <li>
+                <Link to="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-[#D4AF37] transition-colors">About Firm & Team</Link>
+              </li>
+              {/* <li>
+                <Link to="/resources" className="hover:text-[#D4AF37] transition-colors">Ebooks & Resources</Link>
+              </li> */}
+              <li>
+                <Link to="/contact" className="hover:text-[#D4AF37] transition-colors">Contact & Inquiries</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Clean Links Column: Packages */}
+          <div>
+            <h5 className="text-xs font-black uppercase tracking-[0.15em] text-white mb-4">
+              Packages
+            </h5>
+            <ul className="space-y-2.5 text-xs text-zinc-400">
+              <li>
+                <Link to="/pricing" className="hover:text-[#D4AF37] transition-colors">Foundation ($999)</Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="hover:text-[#D4AF37] transition-colors">Presence ($2,222)</Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="hover:text-[#D4AF37] transition-colors">Management Package</Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="hover:text-[#D4AF37] transition-colors">Compare Packages</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Clean Links Column: Quick Actions */}
+          <div>
+            <h5 className="text-xs font-black uppercase tracking-[0.15em] text-white mb-4">
+              Connect
+            </h5>
+            <ul className="space-y-2.5 text-xs text-zinc-400">
+              <li>
+                <a 
+                  href={MEETING_CALENDAR_URL} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#D4AF37] hover:underline flex items-center gap-1 font-semibold"
+                >
+                  Schedule a Meeting
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:service@globalgenerationalwealth.net" className="hover:text-white transition-colors">
+                  Client Support Desk
+                </a>
+              </li>
+              <li>
+                <a href="tel:+18886876829" className="hover:text-white transition-colors">
+                  (888) 687-6829
+                </a>
+              </li>
+              <li>
+                <span className="text-zinc-500">Seattle, WA 98104</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Clean Divider & Bottom Bar with Direct Page Links */}
+        <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+          <p>
+            © {new Date().getFullYear()} Global Generational Wealth. All rights reserved.
+          </p>
+
+          <div className="flex items-center gap-6">
+            <Link to="/terms" className="hover:text-zinc-300 transition-colors">
+              Terms & Conditions
+            </Link>
+            <Link to="/privacy" className="hover:text-zinc-300 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/disclaimer" className="hover:text-zinc-300 transition-colors">
+              Disclaimer
+            </Link>
           </div>
         </div>
 
-        {/* Divider with gradient */}
-        <div className="relative mb-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent"></div>
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 bg-black">
-            <div className="w-2 h-2 bg-[var(--gold)] rounded-full animate-glow"></div>
-          </div>
-        </div>
-
-        {/* Copyright & Additional Info */}
-        <div className="text-center space-y-4">
-          <p className="text-sm text-gray-400 animate-fadeIn">
-            © {new Date().getFullYear()} <span className="text-yellow-500 font-bold">Global Generational Wealth</span>. All Rights Reserved.
-          </p>
-          <p className="text-xs text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Leading the way in credit education, business funding, and strategic wealth development for a new generation of entrepreneurs.
-          </p>
-        </div>
       </div>
-
-      {/* Terms & Conditions Modal */}
-      {showModal === 'terms' && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-b from-[var(--gray-900)] to-black border border-[var(--gold)]/30 rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto">
-            <div className="p-6 sm:p-8">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold gradient-text">Terms & Conditions</h2>
-                <button onClick={closeModal} className="text-gray-400 hover:text-[var(--gold)] text-2xl">&times;</button>
-              </div>
-              <div className="space-y-4 text-gray-300">
-                <p className="font-bold">Last Updated: December 15, 2025</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Acceptance of Terms</h3>
-                <p>By accessing or using the services provided by Global Generational Wealth, you agree to be bound by these Terms & Conditions and all applicable laws and regulations.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. Services</h3>
-                <p>Global Generational Wealth provides educational and consulting services related to personal development, financial literacy, and business strategy. All services are provided for educational purposes only.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Intellectual Property</h3>
-                <p>All content, materials, and intellectual property provided by Global Generational Wealth are protected by copyright and other intellectual property laws. Unauthorized use is strictly prohibited.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. User Responsibilities</h3>
-                <p>You agree to use our services responsibly and not engage in any unlawful activities. You are responsible for maintaining the confidentiality of your account information.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Limitation of Liability</h3>
-                <p>Global Generational Wealth shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Changes to Terms</h3>
-                <p>We reserve the right to modify these terms at any time. Continued use of our services after such modifications constitutes acceptance of the revised terms.</p>
-              </div>
-              <div className="mt-8 text-center">
-                <button
-                  onClick={closeModal}
-                  className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Privacy Policy Modal */}
-      {showModal === 'privacy' && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-b from-[var(--gray-900)] to-black border border-[var(--gold)]/30 rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto">
-            <div className="p-6 sm:p-8">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold gradient-text">Privacy Policy</h2>
-                <button onClick={closeModal} className="text-gray-400 hover:text-[var(--gold)] text-2xl">&times;</button>
-              </div>
-              <div className="space-y-4 text-gray-300">
-                <p className="font-bold">Last Updated: December 15, 2025</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Information We Collect</h3>
-                <p>We collect information you provide directly to us, such as when you contact us, register for services, or participate in surveys. This may include your name, email address, phone number, and payment information.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. How We Use Your Information</h3>
-                <p>We use your information to provide and improve our services, communicate with you, process transactions, and comply with legal obligations.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Information Sharing</h3>
-                <p>We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our business.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. Data Security</h3>
-                <p>We implement industry-standard security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Cookies and Tracking</h3>
-                <p>We may use cookies and similar tracking technologies to enhance your experience on our website and analyze usage patterns.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Your Rights</h3>
-                <p>You have the right to access, update, or delete your personal information. Contact us to exercise these rights.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">7. Changes to Privacy Policy</h3>
-                <p>We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on our website.</p>
-              </div>
-              <div className="mt-8 text-center">
-                <button
-                  onClick={closeModal}
-                  className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Disclaimer Modal */}
-      {showModal === 'disclaimer' && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-b from-[var(--gray-900)] to-black border border-[var(--gold)]/30 rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto">
-            <div className="p-6 sm:p-8">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold gradient-text">Disclaimer</h2>
-                <button onClick={closeModal} className="text-gray-400 hover:text-[var(--gold)] text-2xl">&times;</button>
-              </div>
-              <div className="space-y-4 text-gray-300">
-                <p className="font-bold">Last Updated: December 15, 2025</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">1. Educational Purposes Only</h3>
-                <p>All content provided by Global Generational Wealth is for educational and informational purposes only. We are not financial advisors, lawyers, or accountants. Nothing on this website constitutes professional advice.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">2. No Guarantees</h3>
-                <p>We make no guarantees about the results you may achieve from implementing our strategies or purchasing our services. Past performance is not indicative of future results.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">3. Third-Party Content</h3>
-                <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or opinions expressed on these sites.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">4. Investment Risks</h3>
-                <p>Investing involves risk, including the potential loss of principal. Any investment decisions you make are solely your responsibility.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">5. Testimonials</h3>
-                <p>Testimonials and case studies represent exceptional results and are not typical. Individual results will vary.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">6. Limitation of Liability</h3>
-                <p>To the fullest extent permitted by law, Global Generational Wealth shall not be liable for any direct, indirect, incidental, special, or consequential damages.</p>
-
-                <h3 className="text-xl font-bold text-[var(--gold)] mt-6">7. Governing Law</h3>
-                <p>These disclaimers shall be governed by and construed in accordance with the laws of the State of Washington.</p>
-              </div>
-              <div className="mt-8 text-center">
-                <button
-                  onClick={closeModal}
-                  className="px-6 py-3 bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold)] to-[var(--gold-dark)] text-black font-bold hover:from-[var(--gold)] hover:via-[var(--gold-light)] hover:to-[var(--gold)] transition-all duration-500 uppercase tracking-wider"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </footer>
   );
 }
